@@ -447,8 +447,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Views\Merge\ApplyShelveReport.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\CloudDrive\Workspaces\DirectoryContent\ImportInProjectDialog.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Views\Merge\Developer\DirectoryConflicts\DeleteMoveMenu.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\UnityPlasticDllVersion.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Topbar\Breadcrumb.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\UnityPlasticDllVersion.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\UI\UnityInternals\UnityEditor\SceneManagement\PrefabStageExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\UI\CheckUnityException.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\UI\PathTrimming.cs" />
