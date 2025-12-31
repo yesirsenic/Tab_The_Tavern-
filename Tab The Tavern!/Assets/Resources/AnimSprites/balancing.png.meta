@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -152,10 +152,10 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 0
-        width: 26
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: balancing_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 41
         y: 0
-        width: 23
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: balancing_2
       rect:
         serializedVersion: 2
-        x: 89
+        x: 79
         y: 0
-        width: 20
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: balancing_3
       rect:
         serializedVersion: 2
-        x: 131
+        x: 117
         y: 0
-        width: 16
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,12 +238,12 @@ TextureImporter:
       name: balancing_4
       rect:
         serializedVersion: 2
-        x: 170
+        x: 155
         y: 0
-        width: 20
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: balancing_5
       rect:
         serializedVersion: 2
-        x: 209
+        x: 193
         y: 0
-        width: 18
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,12 +282,12 @@ TextureImporter:
       name: balancing_6
       rect:
         serializedVersion: 2
-        x: 245
+        x: 231
         y: 0
-        width: 21
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,20 +304,20 @@ TextureImporter:
       name: balancing_7
       rect:
         serializedVersion: 2
-        x: 279
+        x: 269
         y: 0
-        width: 23
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e376261a1929db810800000000000000
-      internalID: 1782742181684078398
+      spriteID: f736649aeb1492149bed418656ca6c24
+      internalID: -1847389707
       vertices: []
       indices: 
       edges: []
@@ -326,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 66ba28d19062a824fa023bd594b53745
     internalID: 0
     vertices: []
     indices: 
@@ -334,7 +334,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":38.0,"y":53.0},"gridSpriteOffset":{"x":3.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       balancing_0: -7481042895787649109
       balancing_1: 614241678237588360
@@ -343,7 +345,7 @@ TextureImporter:
       balancing_4: 3216491240779816377
       balancing_5: 387180602299889599
       balancing_6: -1992364277883719684
-      balancing_7: 1782742181684078398
+      balancing_7: -1847389707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

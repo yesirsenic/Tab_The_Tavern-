@@ -150,12 +150,12 @@ TextureImporter:
       name: skip_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 3
         y: 0
-        width: 26
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: skip_1
       rect:
         serializedVersion: 2
-        x: 43
+        x: 41
         y: 0
-        width: 27
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: skip_2
       rect:
         serializedVersion: 2
-        x: 86
+        x: 79
         y: 0
-        width: 23
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: skip_3
       rect:
         serializedVersion: 2
-        x: 120
+        x: 117
         y: 0
-        width: 31
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,12 +238,12 @@ TextureImporter:
       name: skip_4
       rect:
         serializedVersion: 2
-        x: 159
+        x: 155
         y: 0
-        width: 35
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: skip_5
       rect:
         serializedVersion: 2
-        x: 197
+        x: 193
         y: 0
-        width: 33
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,12 +282,12 @@ TextureImporter:
       name: skip_6
       rect:
         serializedVersion: 2
-        x: 243
+        x: 231
         y: 0
-        width: 26
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,12 +304,12 @@ TextureImporter:
       name: skip_7
       rect:
         serializedVersion: 2
-        x: 277
+        x: 269
         y: 0
-        width: 31
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -326,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d76961a0f34fdfc4c81578d0c5c34722
     internalID: 0
     vertices: []
     indices: 
@@ -334,7 +334,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":38.0,"y":53.0},"gridSpriteOffset":{"x":3.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       skip_0: -4358472242703741127
       skip_1: 2638675284363117868
