@@ -9,6 +9,7 @@ public class TimingGameController : MonoBehaviour
     [Header("Movement")]
     [SerializeField] float speed = 600f;
     [SerializeField] float barWidth = 600f;
+    [SerializeField] float YPos = 5f;
 
     float timer;
 
@@ -25,7 +26,7 @@ public class TimingGameController : MonoBehaviour
         timer += Time.deltaTime * speed;
 
         float x = Mathf.PingPong(timer, barWidth) - barWidth / 2f;
-        pointer.anchoredPosition = new Vector2(x, 0f);
+        pointer.anchoredPosition = new Vector2(x, YPos);
     }
 
     public void StartGame()
