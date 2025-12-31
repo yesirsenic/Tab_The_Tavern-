@@ -4,7 +4,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
 
+    [SerializeField] TimingGameController timingGameController;
+    [SerializeField] CharacterAnimator characterAnimator;
+
     public bool isRunning = true;
+
 
     private void Awake()
     {
@@ -15,5 +19,11 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    public void StartGame()
+    {
+        timingGameController.StartGame();
+        characterAnimator.StartGame();
     }
 }

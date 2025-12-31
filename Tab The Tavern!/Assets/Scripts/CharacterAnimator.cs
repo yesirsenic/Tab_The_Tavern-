@@ -24,8 +24,7 @@ public class CharacterAnimator : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(AnimationLoop());
-        animator.speed = animationSpeed;
+        animator.speed = 0f;
     }
 
     IEnumerator AnimationLoop()
@@ -67,6 +66,12 @@ public class CharacterAnimator : MonoBehaviour
         yield return null;
         var info = animator.GetCurrentAnimatorStateInfo(0);
         yield return new WaitForSeconds(info.length);
+    }
+
+    public void StartGame()
+    {
+        StartCoroutine(AnimationLoop());
+        animator.speed = animationSpeed;
     }
 
 }

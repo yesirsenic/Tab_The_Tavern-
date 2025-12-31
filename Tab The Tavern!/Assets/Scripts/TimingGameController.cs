@@ -15,7 +15,7 @@ public class TimingGameController : MonoBehaviour
 
     private void Start()
     {
-        StartGame();
+
     }
 
     private void Update()
