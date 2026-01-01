@@ -1,4 +1,6 @@
+using System.Net.Sockets;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -6,8 +8,20 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TimingGameController timingGameController;
     [SerializeField] CharacterAnimator characterAnimator;
+    [SerializeField] SpeedManager speedManager;
+    [SerializeField] GameObject StartButton;
+    [SerializeField] Text scoreText;
+    [SerializeField] Text bestScoreText;
 
+    public enum SpeedState
+    {
+        Normal, Fast, Slow
+    }
+
+    public SpeedState speedState = SpeedState.Normal;
     public bool isRunning = true;
+    public int score = 0;
+    public int bestScore = 0;
 
 
     private void Awake()
@@ -19,6 +33,32 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+        GetBestScore();
+    }
+
+    private void Update()
+    {
+        if(scoreText.text != score.ToString())
+        {
+            scoreText.text = score.ToString();
+        }
+    }
+
+    private void GetBestScore()
+    {
+        bestScore = PlayerPrefs.GetInt("BestScore");
+        bestScoreText.text = bestScore.ToString();
+        
+    }
+
+    private void SetBestScore(int num)
+    {
+        if(num > bestScore)
+        {
+            bestScore = num;
+            PlayerPrefs.SetInt("BestScore", bestScore);
+            bestScoreText.text = bestScore.ToString();
+        }
     }
 
     public void StartGame()
@@ -26,4 +66,20 @@ public class GameManager : MonoBehaviour
         timingGameController.StartGame();
         characterAnimator.StartGame();
     }
+
+    public void GameEnd()
+    {
+        isRunning = false;
+        StartButton.SetActive(true);
+        timingGameController.SetEnd();
+        speedManager.GameEnd();
+        characterAnimator.EndGame();
+        SetBestScore(score);
+        score = 0;
+        speedState = SpeedState.Normal;
+    }
+
+   
+
+    
 }

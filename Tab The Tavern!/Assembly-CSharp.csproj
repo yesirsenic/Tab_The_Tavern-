@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\TimeGamingTouch.cs" />
+    <Compile Include="Assets\Scripts\SpeedManager.cs" />
     <Compile Include="Assets\Scripts\TimingGameController.cs" />
     <Compile Include="Assets\Scripts\CharacterAnimator.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

@@ -8,14 +8,16 @@ public class TimingGameController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] float speed = 600f;
+    [SerializeField] float normalSpeed;
     [SerializeField] float barWidth = 600f;
     [SerializeField] float YPos = 5f;
+    [SerializeField] float startXPos = -358f;
 
     float timer;
 
     private void Start()
     {
-
+        normalSpeed = speed;
     }
 
     private void Update()
@@ -45,11 +47,13 @@ public class TimingGameController : MonoBehaviour
 
         if (IsSuccess())
         {
+            GameManager.Instance.score++;
             Debug.Log("SUCCESS!");
         }
 
         else
         {
+            GameManager.Instance.GameEnd();
             Debug.Log("Fail!!");
         }
     }
@@ -63,6 +67,32 @@ public class TimingGameController : MonoBehaviour
 
         return px >= left && px <= right;
         
+    }
+
+    public void SetEnd()
+    {
+        pointer.anchoredPosition = new Vector2(startXPos, YPos);
+        speed = 600f;
+        normalSpeed = speed;
+
+    }
+
+    public void SpeedChange()
+    {
+        switch(GameManager.Instance.speedState)
+        {
+            case GameManager.SpeedState.Normal:
+                speed = normalSpeed;
+                break;
+
+            case GameManager.SpeedState.Fast:
+                speed *= 2;
+                break;
+
+            case GameManager.SpeedState.Slow:
+                speed /= 2;
+                break;
+        }
     }
 
     

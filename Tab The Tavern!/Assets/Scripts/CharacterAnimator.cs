@@ -5,6 +5,8 @@ public class CharacterAnimator : MonoBehaviour
 {
     [SerializeField] Animator animator;
 
+    Coroutine animationLoopCoroutine;
+
     [Header("All Animation State")]
     [SerializeField]
     string[] states =
@@ -70,8 +72,21 @@ public class CharacterAnimator : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(AnimationLoop());
         animator.speed = animationSpeed;
+        animationLoopCoroutine = StartCoroutine(AnimationLoop());
+    }
+
+    public void EndGame()
+    {
+        if (animationLoopCoroutine != null)
+        {
+            StopCoroutine(animationLoopCoroutine);
+            animationLoopCoroutine = null;
+        }
+        animator.Play(states[firstIndex], 0, 0f);
+        animator.speed = 0f;
+        animator.Update(0f);
+        
     }
 
 }
