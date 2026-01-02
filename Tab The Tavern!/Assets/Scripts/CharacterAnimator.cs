@@ -22,7 +22,7 @@ public class CharacterAnimator : MonoBehaviour
     [SerializeField] int firstIndex = 0;
 
     int lastIndex = -1;
-    float animationSpeed = 0.9f;
+    float animationSpeed = 1f;
 
     private void Start()
     {
@@ -87,6 +87,11 @@ public class CharacterAnimator : MonoBehaviour
         animator.speed = 0f;
         animator.Update(0f);
         
+    }
+
+    public Animator GetAnimator()
+    {
+        return animator;
     }
 
 }

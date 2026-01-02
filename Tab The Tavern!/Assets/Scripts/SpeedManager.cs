@@ -4,7 +4,10 @@ using UnityEngine;
 public class SpeedManager : MonoBehaviour
 {
     private int lastTriggeredScore = 0;
+    private int nextTriggeredScore = 10;
     private Coroutine speedCoroutine;
+    private bool isAnimation = false;
+    private int speedChangeCount = 0;
 
     [SerializeField]
     Animator SpeedAnimator;
@@ -34,10 +37,11 @@ public class SpeedManager : MonoBehaviour
     {
         int currentScore = GameManager.Instance.score;
 
-        if(currentScore >= lastTriggeredScore +10)
+        if(currentScore >= nextTriggeredScore && !isAnimation)
         {
-            lastTriggeredScore = (currentScore / 10) * 10;
+            lastTriggeredScore = nextTriggeredScore;
 
+            isAnimation = true;
             StartSpeedChangeCoroutine();
         }
     }
@@ -97,9 +101,45 @@ public class SpeedManager : MonoBehaviour
 
         SpeedAnimator.gameObject.SetActive(false);
         gameController.SpeedChange();
-
+        SetNextTriggerScore();
+        UpNormalSpeed();
+        GameManager.Instance.AnimSpeedUp();
+        isAnimation = false;
         speedCoroutine = null;
     }
+
+    private void SetNextTriggerScore()
+    {
+        switch(GameManager.Instance.speedState)
+        {
+            case GameManager.SpeedState.Normal:
+                int[] candidates = { 10, 15, 20 };
+                nextTriggeredScore = lastTriggeredScore + candidates[Random.Range(0, candidates.Length)];
+                break;
+
+            case GameManager.SpeedState.Fast:
+                int[] candidates_Fast = { 20, 25, 30,35 };
+                nextTriggeredScore = lastTriggeredScore + candidates_Fast[Random.Range(0, candidates_Fast.Length)];
+                break;
+
+            case GameManager.SpeedState.Slow:
+                int[] candidates_Slow = { 5,10 };
+                nextTriggeredScore = lastTriggeredScore + candidates_Slow[Random.Range(0, candidates_Slow.Length)];
+                break;
+
+        }
+    }
+
+    private void UpNormalSpeed()
+    {
+        speedChangeCount++;
+
+        if(speedChangeCount >=2)
+        {
+            speedChangeCount = 0;
+            gameController.NormalSpeedUP();
+        }
+    }    
 
     public void GameEnd()
     {
@@ -110,5 +150,14 @@ public class SpeedManager : MonoBehaviour
         }
 
         lastTriggeredScore = 0;
+        nextTriggeredScore = 10;
+        isAnimation = false;
+        speedChangeCount = 0;
+        SpeedAnimator.speed = 1f;
+    }
+
+    public Animator GetSpeedAnimator()
+    {
+        return SpeedAnimator;
     }
 }

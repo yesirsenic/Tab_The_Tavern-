@@ -7,8 +7,9 @@ public class TimingGameController : MonoBehaviour
     [SerializeField] RectTransform successZone;
 
     [Header("Movement")]
-    [SerializeField] float speed = 600f;
+    [SerializeField] float speed;
     [SerializeField] float normalSpeed;
+    [SerializeField] float baseSpeed = 600f;
     [SerializeField] float barWidth = 600f;
     [SerializeField] float YPos = 5f;
     [SerializeField] float startXPos = -358f;
@@ -17,6 +18,7 @@ public class TimingGameController : MonoBehaviour
 
     private void Start()
     {
+        speed = baseSpeed;
         normalSpeed = speed;
     }
 
@@ -93,6 +95,16 @@ public class TimingGameController : MonoBehaviour
                 speed /= 2;
                 break;
         }
+    }
+
+    public void NormalSpeedUP()
+    {
+        normalSpeed += 100;
+    }
+
+    public float AnimSpeedSet()
+    {
+        return speed / baseSpeed;
     }
 
     

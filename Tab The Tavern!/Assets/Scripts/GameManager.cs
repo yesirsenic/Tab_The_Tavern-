@@ -61,6 +61,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void AnimSpeedUp()
+    {
+        Animator characterAnim = characterAnimator.GetAnimator();
+        Animator speedAnim = speedManager.GetSpeedAnimator();
+
+        characterAnim.speed = timingGameController.AnimSpeedSet();
+        speedAnim.speed = timingGameController.AnimSpeedSet();
+    }
+
     public void StartGame()
     {
         timingGameController.StartGame();
