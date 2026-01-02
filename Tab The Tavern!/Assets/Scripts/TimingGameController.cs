@@ -5,6 +5,7 @@ public class TimingGameController : MonoBehaviour
     [Header("UI References")]
     [SerializeField] RectTransform pointer;
     [SerializeField] RectTransform successZone;
+    [SerializeField] RectTransform clickEffect;
 
     [Header("Movement")]
     [SerializeField] float speed;
@@ -50,6 +51,7 @@ public class TimingGameController : MonoBehaviour
         if (IsSuccess())
         {
             GameManager.Instance.score++;
+            ClickEffect();
             Debug.Log("SUCCESS!");
         }
 
@@ -69,6 +71,17 @@ public class TimingGameController : MonoBehaviour
 
         return px >= left && px <= right;
         
+    }
+
+    void ClickEffect()
+    {
+        RectTransform vfx = Instantiate(
+        clickEffect,
+        pointer.parent   
+        );
+
+        vfx.anchoredPosition = pointer.anchoredPosition;
+
     }
 
     public void SetEnd()

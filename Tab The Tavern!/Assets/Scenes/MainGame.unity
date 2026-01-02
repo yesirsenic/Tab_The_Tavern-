@@ -1408,8 +1408,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimingGameController
   pointer: {fileID: 1452047311}
   successZone: {fileID: 1241030919}
+  clickEffect: {fileID: 2964368898098060495, guid: ade0cb7cf9a37ff49babfadfe385f707, type: 3}
   speed: 600
   normalSpeed: 0
+  baseSpeed: 600
   barWidth: 750
   YPos: 5
   startXPos: -358
