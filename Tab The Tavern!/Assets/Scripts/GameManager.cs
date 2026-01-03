@@ -71,6 +71,8 @@ public class GameManager : MonoBehaviour
         characterAnimator.EndGame();
         SetBestScore(score);
         score = 0;
+
+        AdsManager.Instance.OnplayerDied();
     }
 
     private void GamePreEnd()

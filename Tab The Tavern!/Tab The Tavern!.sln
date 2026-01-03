@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Mathematics.Editor", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.SettingsProvider.Editor", "Unity.VisualScripting.SettingsProvider.Editor.csproj", "{54B73B86-5BE2-51DF-5CAF-C5871B0FE721}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMobileAds.Editor", "GoogleMobileAds.Editor.csproj", "{918306E9-0AD5-2C5D-6FD7-B2B58CFC0397}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem.TestFramework", "Unity.InputSystem.TestFramework.csproj", "{3C387354-CFFB-266F-294E-E328AF390680}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.Shared.Editor", "Unity.VisualScripting.Shared.Editor.csproj", "{AF66C376-E463-6DBF-EB24-1AA63651EAD4}"
@@ -269,6 +271,10 @@ Global
 		{54B73B86-5BE2-51DF-5CAF-C5871B0FE721}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54B73B86-5BE2-51DF-5CAF-C5871B0FE721}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54B73B86-5BE2-51DF-5CAF-C5871B0FE721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918306E9-0AD5-2C5D-6FD7-B2B58CFC0397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918306E9-0AD5-2C5D-6FD7-B2B58CFC0397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918306E9-0AD5-2C5D-6FD7-B2B58CFC0397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918306E9-0AD5-2C5D-6FD7-B2B58CFC0397}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C387354-CFFB-266F-294E-E328AF390680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C387354-CFFB-266F-294E-E328AF390680}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C387354-CFFB-266F-294E-E328AF390680}.Release|Any CPU.ActiveCfg = Release|Any CPU
