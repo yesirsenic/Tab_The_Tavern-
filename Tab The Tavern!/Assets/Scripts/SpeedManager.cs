@@ -48,8 +48,7 @@ public class SpeedManager : MonoBehaviour
 
     void StartSpeedChangeCoroutine()
     {
-        if (speedCoroutine != null)
-            StopCoroutine(speedCoroutine);
+        if (speedCoroutine != null) return;
 
         speedCoroutine = StartCoroutine(SpeedChangeRoutine());
     }
@@ -145,15 +144,19 @@ public class SpeedManager : MonoBehaviour
     {
         if (speedCoroutine != null)
         {
-            StopCoroutine(SpeedChangeRoutine());
+            StopCoroutine(speedCoroutine);
             speedCoroutine = null;
         }
-
+        SpeedAnimator.gameObject.SetActive(false);
         lastTriggeredScore = 0;
         nextTriggeredScore = 10;
-        isAnimation = false;
         speedChangeCount = 0;
         SpeedAnimator.speed = 1f;
+    }
+
+    public void GameAfterEnd()
+    {
+        isAnimation = false;
     }
 
     public Animator GetSpeedAnimator()

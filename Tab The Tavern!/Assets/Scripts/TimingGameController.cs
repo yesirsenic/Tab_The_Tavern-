@@ -57,7 +57,7 @@ public class TimingGameController : MonoBehaviour
 
         else
         {
-            GameManager.Instance.GameEnd();
+            GameManager.Instance.GameEndCorutineStart();
             Debug.Log("Fail!!");
         }
     }
@@ -87,7 +87,7 @@ public class TimingGameController : MonoBehaviour
     public void SetEnd()
     {
         pointer.anchoredPosition = new Vector2(startXPos, YPos);
-        speed = 600f;
+        speed = baseSpeed;
         normalSpeed = speed;
 
     }
