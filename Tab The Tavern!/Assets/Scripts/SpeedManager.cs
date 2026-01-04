@@ -23,6 +23,9 @@ public class SpeedManager : MonoBehaviour
         "Speed Down"
     };
 
+    [SerializeField]
+    GameObject[] AnimObjects;
+
     private enum AnimKey
     {
         Normal,Fast,Slow
@@ -30,6 +33,9 @@ public class SpeedManager : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.Instance.isRunning)
+            return;
+
         CheckScore();
     }
 
@@ -151,6 +157,18 @@ public class SpeedManager : MonoBehaviour
         lastTriggeredScore = 0;
         nextTriggeredScore = 10;
         speedChangeCount = 0;
+        SpeedAnimator.Rebind();
+        SpeedAnimator.Update(0f);
+        SpeedAnimator.speed = 0f;
+
+        for(int i = 0; i<AnimObjects.Length; i++)
+        {
+            AnimObjects[i].SetActive(false);
+        }
+    }
+
+    public void GameStart()
+    {
         SpeedAnimator.speed = 1f;
     }
 

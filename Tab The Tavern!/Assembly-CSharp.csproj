@@ -63,7 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\TimeGamingTouch.cs" />
     <Compile Include="Assets\Scripts\AdsManager.cs" />
+    <Compile Include="Assets\Scripts\NoAdsManager.cs" />
     <Compile Include="Assets\Scripts\SpeedManager.cs" />
+    <Compile Include="Assets\Scripts\IAPManager.cs" />
     <Compile Include="Assets\Scripts\SuccessEffect.cs" />
     <Compile Include="Assets\Scripts\TimingGameController.cs" />
     <Compile Include="Assets\Scripts\CharacterAnimator.cs" />
@@ -560,6 +562,10 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.3f1\Editor\Data\Managed\UnityEngine\UnityEditor.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
@@ -568,12 +574,32 @@
       <HintPath>Library\PackageCache\com.unity.ext.nunit@031a54704bff\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.IO.Hashing">
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.Tests\System.IO.Hashing\System.IO.Hashing.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@6279e2b7c485\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Cecil">
@@ -584,28 +610,8 @@
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="GoogleMobileAds.Common">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GoogleMobileAds">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Core">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Ump.Unity">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Ump">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
@@ -1210,6 +1216,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.Purchasing.SecurityStub.csproj">
+      <Project>{FB399DDE-2F10-49A1-826A-F82E23F864BA}</Project>
+      <Name>Unity.Purchasing.SecurityStub</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Path.Editor.csproj">
       <Project>{E27B11F6-65A9-616E-EFF8-F5490EF2530F}</Project>
       <Name>Unity.2D.Common.Path.Editor</Name>
@@ -1222,9 +1232,17 @@
       <Project>{0066DFC2-6A7D-66FD-A647-73978B2D68B5}</Project>
       <Name>PsdPlugin</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.csproj">
+      <Project>{1EA2DC4A-A8E9-84D6-6A45-AC7C8ABA4449}</Project>
+      <Name>Unity.Services.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
       <Project>{1936C63E-6164-FF3A-55E8-85E299285877}</Project>
       <Name>Unity.2D.IK.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.Purchasing.csproj">
+      <Project>{C6F766F0-58C7-D078-29E3-C0D0ABCC9829}</Project>
+      <Name>UnityEditor.Purchasing</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
       <Project>{54B73B86-5BE2-51DF-5CAF-C5871B0FE721}</Project>
@@ -1241,6 +1259,10 @@
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
       <Project>{6E380510-B45F-1593-1E2F-EAEE5A9FB821}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Purchasing.csproj">
+      <Project>{0366C078-8D5D-45A9-94EF-9425E02A377F}</Project>
+      <Name>Unity.Purchasing</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
       <Project>{93C2DE8E-45F0-44D2-6597-37CA0B425612}</Project>
@@ -1266,9 +1288,17 @@
       <Project>{104183ED-1486-4D17-89AC-F4E3F6E58AC1}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Purchasing.Utilities.csproj">
+      <Project>{4ECDE2B1-9FFE-0DE7-EDFC-5F6BD8FA35A9}</Project>
+      <Name>Unity.Purchasing.Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.Editor.csproj">
       <Project>{6E6F377B-7DBF-7F55-FC53-1C87D95995E2}</Project>
       <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Purchasing.Stores.csproj">
+      <Project>{653B24F9-530E-A953-F5A7-106BF763A9B5}</Project>
+      <Name>Unity.Purchasing.Stores</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
       <Project>{823963A4-0ED6-CE0D-FA95-2F91C198250E}</Project>
@@ -1278,6 +1308,10 @@
       <Project>{45710B64-5AEE-FC7B-FD6C-D565C002CE12}</Project>
       <Name>Unity.Mathematics.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Components.csproj">
+      <Project>{4C59F774-1779-E764-481D-E27091B26398}</Project>
+      <Name>Unity.Services.Core.Components</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Aseprite.Common.csproj">
       <Project>{744BAC32-AEDB-D96B-162F-FDEEE22315D0}</Project>
       <Name>Unity.2D.Aseprite.Common</Name>
@@ -1285,6 +1319,10 @@
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{11288183-EEB3-03BB-0BD0-82AB83B58612}</Project>
       <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
+      <Project>{D9CB78CE-37DE-EE45-ACAB-94AB231BC6AE}</Project>
+      <Name>Unity.Services.Core.Analytics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Aseprite.Editor.csproj">
       <Project>{3C63B29E-63C0-2E25-0617-157F50ED21DD}</Project>
@@ -1346,6 +1384,14 @@
       <Project>{17D67768-701E-FDC6-1F8E-A7F34DE44AEE}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Purchasing.SecurityCore.csproj">
+      <Project>{30343C05-C1FC-AEBD-DEA8-2A248C0D244D}</Project>
+      <Name>Unity.Purchasing.SecurityCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Environments.csproj">
+      <Project>{D20D2E17-082A-BFEB-2744-EC0F8B8DE2D6}</Project>
+      <Name>Unity.Services.Core.Environments</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
       <Project>{2EC9C7C0-0A6E-EC18-B103-9912C6CF503D}</Project>
       <Name>Unity.Burst</Name>
@@ -1369,6 +1415,10 @@
     <ProjectReference Include="Unity.InputSystem.csproj">
       <Project>{965C22C9-075D-8DD3-9C27-F34B035DD247}</Project>
       <Name>Unity.InputSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Purchasing.Codeless.csproj">
+      <Project>{D82F2979-88FB-028C-F471-B5B0748AFF52}</Project>
+      <Name>Unity.Purchasing.Codeless</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

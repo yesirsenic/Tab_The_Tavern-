@@ -29,6 +29,17 @@ public class CharacterAnimator : MonoBehaviour
         animator.speed = 0f;
     }
 
+    private void Update()
+    {
+        if(!GameManager.Instance.isRunning)
+        {
+            if(IsAnimatorRunning(animator))
+            {
+                animator.speed = 0f;
+            }
+        }
+    }
+
     IEnumerator AnimationLoop()
     {
         Play(firstIndex);
@@ -68,6 +79,11 @@ public class CharacterAnimator : MonoBehaviour
         yield return null;
         var info = animator.GetCurrentAnimatorStateInfo(0);
         yield return new WaitForSeconds(info.length);
+    }
+
+    bool IsAnimatorRunning(Animator animator)
+    {
+        return animator.enabled && animator.speed > 0f;
     }
 
     public void StartGame()

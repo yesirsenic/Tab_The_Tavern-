@@ -38,6 +38,8 @@ public class TimingGameController : MonoBehaviour
     {
         timer = 0f;
         GameManager.Instance.isRunning = true;
+        speed = baseSpeed;
+        normalSpeed = speed;
     }
 
     public void StopGame()

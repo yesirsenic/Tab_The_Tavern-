@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text scoreText;
     [SerializeField] Text bestScoreText;
     [SerializeField] GameObject explosion;
+    [SerializeField] GameObject NoAdsButton;
+    [SerializeField] GameObject NoAdsPopup;
 
     public enum SpeedState
     {
@@ -36,6 +38,13 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         GetBestScore();
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+    }
+
+    private void Start()
+    {
+        CheckPurchasedNoAds();
     }
 
     private void Update()
@@ -82,28 +91,6 @@ public class GameManager : MonoBehaviour
         speedState = SpeedState.Normal;
     }
 
-    public void AnimSpeedUp()
-    {
-        Animator characterAnim = characterAnimator.GetAnimator();
-        Animator speedAnim = speedManager.GetSpeedAnimator();
-
-        characterAnim.speed = timingGameController.AnimSpeedSet();
-        speedAnim.speed = timingGameController.AnimSpeedSet();
-    }
-
-    public void StartGame()
-    {
-        timingGameController.StartGame();
-        characterAnimator.StartGame();
-    }
-
-    
-
-    public void GameEndCorutineStart()
-    {
-        StartCoroutine(GameEndAnim());
-    }
-    
     IEnumerator GameEndAnim()
     {
         explosion.SetActive(true);
@@ -126,14 +113,49 @@ public class GameManager : MonoBehaviour
         characterAnimator.gameObject.SetActive(true);
 
         GameEnd();
-
-
-
-
-
-
-
     }
+
+    private void CheckPurchasedNoAds()
+    {
+        if(NoAdsManager.Instance.HasNoAds ==true)
+        {
+            NoAdsButton.SetActive(false);
+            NoAdsPopup.SetActive(false);
+        }
+    }
+
+    public void AnimSpeedUp()
+    {
+        Animator characterAnim = characterAnimator.GetAnimator();
+        Animator speedAnim = speedManager.GetSpeedAnimator();
+
+        characterAnim.speed = timingGameController.AnimSpeedSet();
+        speedAnim.speed = timingGameController.AnimSpeedSet();
+    }
+
+    public void StartGame()
+    {
+        timingGameController.StartGame();
+        characterAnimator.StartGame();
+        speedManager.GameStart();
+    }
+
+    
+
+    public void GameEndCorutineStart()
+    {
+        StartCoroutine(GameEndAnim());
+    }
+
+    public void PurchasedNoAds()
+    {
+        NoAdsButton.SetActive(false);
+        NoAdsPopup.SetActive(false);  
+    }
+
+    
+    
+    
 
    
 

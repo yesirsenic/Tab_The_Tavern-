@@ -70,6 +70,9 @@ public class AdsManager : MonoBehaviour
 
     public void OnplayerDied()
     {
+        if (NoAdsManager.Instance.HasNoAds)
+            return;
+
         deathCount++;
 
         if(deathCount >= showAdEveryDeath)
