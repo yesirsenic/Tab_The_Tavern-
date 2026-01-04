@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimingGameController : MonoBehaviour
 {
@@ -15,12 +16,29 @@ public class TimingGameController : MonoBehaviour
     [SerializeField] float YPos = 5f;
     [SerializeField] float startXPos = -358f;
 
+    [Header("Images")]
+    [SerializeField] Sprite red_Ball;
+    [SerializeField] Sprite Yellow_Ball;
+
     float timer;
+    float prevX;
+    float prevDir;
+    float beatToCenter = 0.5f;
+    float minBeat = 0.35f;
+    bool isYellow;
+    bool dirCheckReady = false;
+
 
     private void Start()
     {
         speed = baseSpeed;
         normalSpeed = speed;
+        isYellow = false;
+
+        prevX = pointer.anchoredPosition.x;
+        prevDir = 1f;
+        dirCheckReady = false;
+        beatToCenter = 0.5f;
     }
 
     private void Update()
@@ -32,6 +50,26 @@ public class TimingGameController : MonoBehaviour
 
         float x = Mathf.PingPong(timer, barWidth) - barWidth / 2f;
         pointer.anchoredPosition = new Vector2(x, YPos);
+
+        if (!dirCheckReady)
+        {
+            prevX = x;
+            dirCheckReady = true;
+            return;
+        }
+
+        float deltaX = x - prevX;
+        float currentDir = Mathf.Sign(deltaX);
+
+
+
+        if (prevDir != 0f && currentDir != prevDir)
+        {
+            OnPointerDirectionChanged(currentDir);
+        }
+
+        prevDir = currentDir;
+        prevX = x;
     }
 
     public void StartGame()
@@ -49,17 +87,21 @@ public class TimingGameController : MonoBehaviour
 
     public void CheckResult()
     {
+        if (isYellow)
+            return;
 
         if (IsSuccess())
         {
             GameManager.Instance.score++;
             ClickEffect();
+            SFXManager.Instance.PlaySFX(SFXType.Success);
             Debug.Log("SUCCESS!");
         }
 
         else
         {
             GameManager.Instance.GameEndCorutineStart();
+            SFXManager.Instance.PlaySFX(SFXType.Explosion);
             Debug.Log("Fail!!");
         }
     }
@@ -84,6 +126,40 @@ public class TimingGameController : MonoBehaviour
 
         vfx.anchoredPosition = pointer.anchoredPosition;
 
+        pointer.gameObject.GetComponent<Image>().sprite = Yellow_Ball;
+
+        isYellow = true;
+
+
+
+    }
+
+    void OnPointerDirectionChanged(float newDir)
+    {
+
+        if (newDir < 0)
+        {
+            if (!isYellow)
+            {
+                CheckResult();
+                return;
+            }
+
+            pointer.gameObject.GetComponent<Image>().sprite = red_Ball;
+            isYellow = false;
+        }
+
+        else
+        {
+            if (!isYellow)
+            {
+                CheckResult();
+                return;
+            }
+
+            pointer.gameObject.GetComponent<Image>().sprite = red_Ball;
+            isYellow = false;
+        }
     }
 
     public void SetEnd()
@@ -91,6 +167,11 @@ public class TimingGameController : MonoBehaviour
         pointer.anchoredPosition = new Vector2(startXPos, YPos);
         speed = baseSpeed;
         normalSpeed = speed;
+        isYellow = false;
+        prevX = pointer.anchoredPosition.x;
+        prevDir = 1f;
+        dirCheckReady = false;
+        beatToCenter = 0.5f;
 
     }
 
@@ -114,12 +195,20 @@ public class TimingGameController : MonoBehaviour
 
     public void NormalSpeedUP()
     {
-        normalSpeed += 100;
+        beatToCenter *= 0.9f;
+        beatToCenter = Mathf.Max(minBeat, beatToCenter);
+
+        normalSpeed = (barWidth / 2f) / beatToCenter;
     }
 
     public float AnimSpeedSet()
     {
         return speed / baseSpeed;
+    }
+
+    public float SpeedAnimSpeedSet()
+    {
+        return normalSpeed / baseSpeed;
     }
 
     

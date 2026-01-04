@@ -63,8 +63,8 @@
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\StreamCompressionModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\FixedList.gen.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\FixedStringParseMethods.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\BitField.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\FixedStringParseMethods.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\NativeText.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\DoubleRewindableAllocators.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\UnsafeQueue.cs" />
@@ -76,8 +76,8 @@
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\UnsafeParallelHashMap.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\UnsafeHashMap.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\xxHash3.StreamingState.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\FixedStringMethods.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\FixedStringMethods.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\FixedString.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\NativeSort.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections\DataStreamWriter.cs" />
@@ -712,6 +712,10 @@
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@6279e2b7c485\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
@@ -722,10 +726,6 @@
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">

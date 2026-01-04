@@ -105,6 +105,10 @@ public class SpeedManager : MonoBehaviour
         yield return new WaitForSeconds(length / speed);
 
         SpeedAnimator.gameObject.SetActive(false);
+        for (int i = 0; i < AnimObjects.Length; i++)
+        {
+            AnimObjects[i].SetActive(false);
+        }
         gameController.SpeedChange();
         SetNextTriggerScore();
         UpNormalSpeed();

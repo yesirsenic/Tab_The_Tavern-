@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlasticSCM.Editor", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Aseprite.Editor", "Unity.2D.Aseprite.Editor.csproj", "{3C63B29E-63C0-2E25-0617-157F50ED21DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Purchasing", "Unity.Purchasing.csproj", "{0366C078-8D5D-45A9-94EF-9425E02A377F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Services.Core.Internal", "Unity.Services.Core.Internal.csproj", "{0F6D4B9F-AE41-1F69-321C-C810C70BFE05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Purchasing", "Unity.Purchasing.csproj", "{0366C078-8D5D-45A9-94EF-9425E02A377F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Mathematics", "Unity.Mathematics.csproj", "{17D67768-701E-FDC6-1F8E-A7F34DE44AEE}"
 EndProject
@@ -171,14 +171,14 @@ Global
 		{3C63B29E-63C0-2E25-0617-157F50ED21DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C63B29E-63C0-2E25-0617-157F50ED21DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C63B29E-63C0-2E25-0617-157F50ED21DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0366C078-8D5D-45A9-94EF-9425E02A377F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0366C078-8D5D-45A9-94EF-9425E02A377F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0366C078-8D5D-45A9-94EF-9425E02A377F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0366C078-8D5D-45A9-94EF-9425E02A377F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F6D4B9F-AE41-1F69-321C-C810C70BFE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F6D4B9F-AE41-1F69-321C-C810C70BFE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F6D4B9F-AE41-1F69-321C-C810C70BFE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F6D4B9F-AE41-1F69-321C-C810C70BFE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0366C078-8D5D-45A9-94EF-9425E02A377F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0366C078-8D5D-45A9-94EF-9425E02A377F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0366C078-8D5D-45A9-94EF-9425E02A377F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0366C078-8D5D-45A9-94EF-9425E02A377F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17D67768-701E-FDC6-1F8E-A7F34DE44AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{17D67768-701E-FDC6-1F8E-A7F34DE44AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17D67768-701E-FDC6-1F8E-A7F34DE44AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU

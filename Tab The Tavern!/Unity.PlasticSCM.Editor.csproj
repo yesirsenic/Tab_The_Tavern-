@@ -414,8 +414,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\ExternalLink.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\UI\UnityInternals\UnityEditor\SavedGUIState.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Views\FileSystemOperation.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Views\Labels\Dialogs\CreateLabelView.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\UI\EntryBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Views\Labels\Dialogs\CreateLabelView.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Views\DateFilter.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Views\Merge\Developer\MergeOptionsDialog.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Editor\Views\Branch\BranchesViewMenu.cs" />

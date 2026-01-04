@@ -296,8 +296,8 @@
     <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\Actions\Composites\OneModifierComposite.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\Editor\PropertyDrawers\InputActionReferenceSearchProviders.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\Utilities\DisplayStringFormatAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\Controls\Processors\CompensateRotationProcessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\Editor\Settings\InputSettingsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\Controls\Processors\CompensateRotationProcessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\State\InputState.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\Controls\Vector2Control.cs" />
     <Compile Include="Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5\InputSystem\Devices\Pointer.cs" />
@@ -1056,6 +1056,10 @@
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@6279e2b7c485\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
@@ -1066,10 +1070,6 @@
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">

@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CheckPurchasedNoAds();
+        BGMManager.Instance.PlayBGM(BGMType.Main);
     }
 
     private void Update()
@@ -80,8 +81,8 @@ public class GameManager : MonoBehaviour
         characterAnimator.EndGame();
         SetBestScore(score);
         score = 0;
-
         AdsManager.Instance.OnplayerDied();
+        BGMManager.Instance.PlayBGM(BGMType.Main);
     }
 
     private void GamePreEnd()
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour
         isRunning = false;
         speedManager.GameEnd();
         speedState = SpeedState.Normal;
+        BGMManager.Instance.StopBGM();
     }
 
     IEnumerator GameEndAnim()
@@ -130,7 +132,7 @@ public class GameManager : MonoBehaviour
         Animator speedAnim = speedManager.GetSpeedAnimator();
 
         characterAnim.speed = timingGameController.AnimSpeedSet();
-        speedAnim.speed = timingGameController.AnimSpeedSet();
+        speedAnim.speed = timingGameController.SpeedAnimSpeedSet();
     }
 
     public void StartGame()
@@ -138,6 +140,7 @@ public class GameManager : MonoBehaviour
         timingGameController.StartGame();
         characterAnimator.StartGame();
         speedManager.GameStart();
+        BGMManager.Instance.PlayBGM(BGMType.Game);
     }
 
     
