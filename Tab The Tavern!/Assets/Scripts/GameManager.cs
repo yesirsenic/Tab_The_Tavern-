@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject explosion;
     [SerializeField] GameObject NoAdsButton;
     [SerializeField] GameObject NoAdsPopup;
+    [SerializeField] GameObject NoAdsBlackPanel;
 
     public enum SpeedState
     {
@@ -154,6 +155,7 @@ public class GameManager : MonoBehaviour
     {
         NoAdsButton.SetActive(false);
         NoAdsPopup.SetActive(false);  
+        NoAdsBlackPanel.SetActive(false);
     }
 
     

@@ -6,4 +6,6 @@ public class ButtonManager : MonoBehaviour
     {
         SFXManager.Instance.PlaySFX(SFXType.ButtonClick);
     }
+
+
 }

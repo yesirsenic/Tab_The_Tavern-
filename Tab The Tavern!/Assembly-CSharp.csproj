@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\SFXData.cs" />
     <Compile Include="Assets\Scripts\TimeGamingTouch.cs" />
+    <Compile Include="Assets\Scripts\MusicToggleIcon.cs" />
     <Compile Include="Assets\Scripts\SpeedSound.cs" />
     <Compile Include="Assets\Scripts\AdsManager.cs" />
     <Compile Include="Assets\Scripts\NoAdsManager.cs" />
