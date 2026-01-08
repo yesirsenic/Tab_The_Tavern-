@@ -6,7 +6,7 @@ public class AdsManager : MonoBehaviour
     public static AdsManager Instance;
 
     [Header("Ad Settings")]
-    [SerializeField] private int showAdEveryDeath = 3;
+    [SerializeField] private int showAdEveryDeath = 2;
     private int deathCount = 0;
 
     private InterstitialAd interstitialAd;
