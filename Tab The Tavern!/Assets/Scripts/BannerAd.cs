@@ -30,7 +30,7 @@ public class BannerAd : MonoBehaviour, IUnityAdsInitializationListener
 
         if (!Advertisement.isInitialized)
         {
-            Advertisement.Initialize(GAME_ID, true, this);
+            Advertisement.Initialize(GAME_ID, false, this);
         }
         else
         {

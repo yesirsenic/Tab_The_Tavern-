@@ -1642,7 +1642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a22df73ca95a944f9a7088511cb0dac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdsManager
-  showAdEveryDeath: 3
+  showAdEveryDeath: 2
 --- !u!4 &973443036
 Transform:
   m_ObjectHideFlags: 0
