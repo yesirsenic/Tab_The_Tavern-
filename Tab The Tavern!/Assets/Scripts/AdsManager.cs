@@ -13,7 +13,7 @@ public class AdsManager : MonoBehaviour
 
 // ⚠️ 실제 배포 시 본인 광고 ID로 교체
 #if UNITY_ANDROID
-    private string adUnitId = "ca-app-pub-3940256099942544/1033173712"; // 테스트 ID
+    private string adUnitId = "ca-app-pub-9548284037151614/4534613435"; // 테스트 ID
 #elif UNITY_IOS
     private string adUnitId = "ca-app-pub-3940256099942544/4411468910";
 #else
