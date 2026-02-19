@@ -74,3 +74,7 @@ __pycache__/
 # Temporary
 *.tmp
 *.temp
+
+# ========== Firebase / Google Keys ==========
+google-services.json
+GoogleService-Info.plist

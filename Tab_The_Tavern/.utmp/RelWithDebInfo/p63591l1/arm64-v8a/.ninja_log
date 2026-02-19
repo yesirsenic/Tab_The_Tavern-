@@ -1,0 +1,12 @@
+# ninja log v5
+76	308	7913230342473629	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5c27063d0ba4463b
+309	544	7913230344689676	D:/Github/Tab_The_Tavern/Tab The Tavern!/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/p63591l1/obj/arm64-v8a/libswappywrapper.so	9064374bbcf31c1a
+1	1552	7913230354846874	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	71761569aa7de6a5
+36	1672	7913230355975406	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	f91e35a630424307
+52	1676	7913230356015550	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	7e0bd1e13ff9b7d3
+64	1690	7913230356226549	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a6964f1b6313f0e6
+20	1694	7913230356256676	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	8f2e03c593fcd0c
+45	1856	7913230357880484	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	55eeb9e6e417131f
+29	2001	7913230359380995	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	9127ea5ec53a35b9
+11	2080	7913230360141083	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	142e165ff5bde6c2
+2081	2246	7913230361813412	D:/Github/Tab_The_Tavern/Tab The Tavern!/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/p63591l1/obj/arm64-v8a/libgame.so	f449cc94eeac9970

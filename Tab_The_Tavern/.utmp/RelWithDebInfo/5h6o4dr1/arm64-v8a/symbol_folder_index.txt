@@ -1,0 +1,1 @@
+D:\Github\Tab_The_Tavern\Tab_The_Tavern\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\5h6o4dr1\obj\arm64-v8a
